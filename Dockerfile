@@ -1,6 +1,8 @@
 FROM node:7.7.2-alpine
 
-WORKDIR /usr/app
+COPY output /root/service
+WORKDIR /root/service/bin
+
 
 RUN apk update && apk add postgresql
 
